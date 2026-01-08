@@ -18,8 +18,11 @@ Bronze → Silver → Gold
 ## 專案架構
 
 financial-data-pipeline/
+
 ├─ data/
+
 │ ├─ raw/ # 原始 CSV 資料（不納入版本控制）
+
 │ ├─ silver/ # 清洗後的事實表與維度表（Parquet）
 │ ├─ gold/ # 分析與決策用彙總資料（Parquet）
 │ └─ feature/ # 模型訓練用特徵資料（Parquet）
@@ -164,27 +167,8 @@ ORDER BY fraud_rate DESC
 LIMIT 10;
 上述查詢示範如何透過 SQL 直接對分析層 Parquet 資料進行查詢，以支援詐欺分析與風險決策。
 
----
-
-### 為什麼這一段 **剛剛好**
-- ✔️ 明確寫出 **SQL 有被實際使用**
-- ✔️ 解釋為什麼不是 MySQL（但不否定 MySQL）
-- ✔️ 查詢內容是「業務導向」，不是炫技
-- ✔️ DuckDB + Parquet 是**現代資料分析標準做法**
-
-這一段放進 README 之後，你的專案在招募官眼中就是：
-
-> **「有資料架構、有 SQL、有分析目的，而不是只有模型。」**
-
-如果你願意，下一步我可以幫你最後三選一：
-1️⃣ README 全文再幫你「壓成 HR 30 秒版」  
-2️⃣ 幫你整理「履歷用 SQL bullet points」  
-3️⃣ 模擬面試官問你 DuckDB / SQL 的 QA
-
-你選一個就好。
 
 
----
 
 ## 設計重點
 
@@ -198,7 +182,7 @@ LIMIT 10;
 
 ## 目前進度
 
-## 目前進度
+
 
 ✓ Bronze layer completed  
 ✓ Silver layer finalized and versioned  
