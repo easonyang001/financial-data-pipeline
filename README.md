@@ -17,22 +17,24 @@ Bronze → Silver → Gold
 
 ## 專案架構
 
+## 專案架構
+
+```text
 financial-data-pipeline/
-
 ├─ data/
-
-│ ├─ raw/ # 原始 CSV 資料（不納入版本控制）
-
-│ ├─ silver/ # 清洗後的事實表與維度表（Parquet）
-│ ├─ gold/ # 分析與決策用彙總資料（Parquet）
-│ └─ feature/ # 模型訓練用特徵資料（Parquet）
+│  ├─ raw/        # 原始 CSV 資料（不納入版本控制）
+│  ├─ silver/     # 清洗後的事實表與維度表（Parquet）
+│  ├─ gold/       # 分析與決策用彙總資料（Parquet）
+│  └─ feature/    # 模型訓練用特徵資料（Parquet）
 ├─ scripts/
-│ ├─ bronze_to_silver.py
-│ ├─ silver_to_gold.py
-│ ├─ silver_to_feature.py
-│ ├─ feature_to_model.py
-│ └─ gold_sql_analysis.py
+│  ├─ bronze_to_silver.py
+│  ├─ silver_to_gold.py
+│  ├─ silver_to_feature.py
+│  ├─ feature_to_model.py
+│  └─ gold_sql_analysis.py
 └─ README.md
+```
+
 
 ---
 
